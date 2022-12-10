@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 function App() {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
-  const [submittext, setSubmittext] = useState('user');
+  const [submittext, setSubmittext] = useState('');
   const [passwordmsg, setPasswordmsg] = useState('');
 
   function display(e) {
     e.preventDefault();
     password == 'user123'
-      ? setSubmittext(name)
+      ? setSubmittext('Welcome ' + name)
       : setPasswordmsg('wrong password');
 
     setName('');
@@ -35,7 +35,7 @@ function App() {
         <input type="submit" />
       </form>
       <p>{passwordmsg}</p>
-      <p>welcome {submittext} </p>
+      <p>{submittext}</p>
     </>
   );
 }
