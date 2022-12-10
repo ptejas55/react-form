@@ -10,7 +10,7 @@ function App() {
     e.preventDefault();
     password == 'user123'
       ? setSubmittext('Welcome ' + name)
-      : setPasswordmsg('wrong password');
+      : setPasswordmsg('wrong password!!');
 
     setName('');
     setPassword('');
